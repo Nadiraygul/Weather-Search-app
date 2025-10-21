@@ -1,0 +1,92 @@
+.weather-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .weather-info {
+    margin-top: 10px;
+
+    .weather-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .city-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .weather-desc {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 4px;
+      text-transform: capitalize;
+    }
+
+    .temp-block {
+      text-align: right;
+
+      .temp {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .feels-like {
+        font-size: 0.85rem;
+        color: #999;
+      }
+    }
+
+    .weather-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+
+      .detail-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .remove-button {
+        background: #ff5252;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: #e04444;
+        }
+      }
+    }
+  }
+}

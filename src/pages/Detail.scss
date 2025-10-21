@@ -1,0 +1,143 @@
+.detail-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 2rem;
+}
+
+.back-link {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateX(-4px);
+  }
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 750px;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+.weather-icon img {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.city-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+
+  span {
+    font-size: 1.6rem;
+    color: #0066ff;
+    font-weight: 500;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.weather-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .stat {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 0.8rem;
+    text-align: center;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .label {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .value {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #111;
+    }
+  }
+}
+
+.extra-info {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+
+  p {
+    margin: 0.3rem 0;
+    strong {
+      color: #0066ff;
+    }
+  }
+}
+
+/* Durum mesajları */
+.loading,
+.error,
+.no-data {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 2rem;
+}
