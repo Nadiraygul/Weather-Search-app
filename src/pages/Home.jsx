@@ -33,6 +33,8 @@ export default function Home() {
       );
       const data = await res.json();
       console.log(data);
+      console.log("dev branch testing");
+      
 
       if (data.cod && data.cod !== 200) {
         setError(data.message || "No result");
@@ -59,6 +61,7 @@ export default function Home() {
     <div className="home-container">
       <div className="home-card">
         <h1>WeatherSearch App</h1>
+        
         <div className="search-wrapper">
           <Search query={query} setQuery={setQuery} onSearch={() => fetchCityWeather(query)} />
         </div>

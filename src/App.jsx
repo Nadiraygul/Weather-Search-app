@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
+    
+    
       <nav>
         <Link to="/">Ana Sayfa</Link>
       </nav>
